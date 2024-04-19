@@ -1,0 +1,623 @@
+/*
+Theme Name: Portfolio
+Author: Ida Ballegaard
+*/
+
+body {
+    background-color: #FFF0D7;
+}
+
+body:not(.home) {
+    background-image: url(img/portfolio-background-7.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 60%;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 80px;
+    margin: 50px 200px 0 0;
+}
+
+.menu-item a {
+    color: #F95335;
+    text-decoration: none;
+    font-family: "Cinzel", serif;
+}
+
+.menu-item :hover {
+    text-decoration: underline;
+}
+
+.banner {
+    background-image: url(img/portfolio-background11.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 32px - 75px);
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+    margin-top: 60px;
+}
+
+.my-name {
+    font-family:"Arizonia", cursive;
+    color: #F95335;
+    font-size: 80px;
+    margin-top: 45px;
+}
+
+.banner p {
+    color: #F95335;
+    font-family: "Cinzel", serif;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.work-hero .row {
+    min-height: calc(100vh - 75px);
+    align-items: center;
+}
+
+.work-hero-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.work-hero-text h2{
+    font-family:"Arizonia", cursive;
+    color: #F95335;
+    font-size: 90px;
+}
+
+.work-hero-text h1{
+    font-family: "Cinzel", serif;
+    color: #F95335;
+    font-size: 120px;
+}
+
+.work-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.work-nav-text a {
+    color: #F95335;
+    text-decoration: none;
+    font-family: "Cinzel", serif;
+}
+
+.work-nav-text :hover {
+    text-decoration: underline;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project-box {
+    min-height: calc(100vh - 100px);
+    width: calc(100vw - 100px) ;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    padding: 60px;
+    background-color: #50A3A4;
+} 
+
+.project-animation {
+    animation: fade-in 0.5s linear forwards;
+    transform: scale(0.8);
+    opacity: 0;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+@keyframes fade-in {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.project-container:nth-child(3n+1) .project-box {
+    background-color: #F95335;
+}
+
+.project-container:nth-child(3n+0) .project-box {
+    background-color: #FCAF38;
+}
+
+.project-container:nth-child(3n+0) .project-text {
+    color: #5D5D5D;
+}
+
+.project-text {
+    color: #FFF0D7;
+}
+
+.project-text h2 {
+    font-family: "Cinzel", serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.img-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img {
+    border-radius: 30px;
+    height: calc(100vh - 250px);
+    width: calc(100vh - 250px);
+    max-width: 100%;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.info {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.text-description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    background-image: url(img/portfolio-background11.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    flex-direction: row;
+    height: calc(100vh - 32px - 75px);
+}
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.my-name-about {
+    font-family:"Arizonia", cursive;
+    color: #F95335;
+    font-size: 80px;
+}
+
+.statement {
+    color: #F95335;
+    font-family: "Cinzel", serif;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+
+.about {
+    min-height: calc(100vh - 100px);
+    width: calc(100vw - 100px) ;
+    background-color: #F95335;
+    margin: 50px;
+    border-radius: 30px;
+    padding: 60px;
+}
+
+.about-animation {
+    animation: fade-in 0.5s linear forwards;
+    transform: scale(0.8);
+    opacity: 0;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+.about-heading {
+    font-family: "Cinzel", serif;
+    color:#FFF0D7;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.video, .video-frame {
+    margin-left: 100px;
+}
+
+.cv-download, .cv-download:hover {
+    border-radius: 10px;
+    color: #F95335;
+    background-color: #FFF0D7;
+    padding: 10px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.about-paragraph {
+    font-family: "Montserrat", sans-serif;
+    color: #FFF0D7;
+    font-size: 20px;
+}
+
+.skills {
+    min-height: calc(100vh - 100px);
+    width: calc(100vw - 100px) ;
+    background-color: #50A3A4;
+    margin: 50px;
+    border-radius: 30px;
+    padding: 60px;
+}
+
+.tool-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 20px 20px 0;
+}
+
+.footer-content {
+    color:#FFF0D7;
+    background-color: #F95335;
+    padding: 60px 40px 30px 150px;
+}
+
+.contact {
+    font-family: "Cinzel", serif;
+    margin-bottom: 30px;
+}
+
+.footer-content h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+
+.footer-content p {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
+}
+
+.logo-footer {
+    height: 170px;
+    width: 170px;
+    margin: -45px 40px 0 0;
+}
+
+.logo-position {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 900px) {
+    .work-hero-text h2{
+        font-family:"Arizonia", cursive;
+        color: #F95335;
+        font-size: 60px;
+    }
+    
+    .work-hero-text h1{
+        font-family: "Cinzel", serif;
+        color: #F95335;
+        font-size: 75px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        gap: 80px;
+        margin: 50px 120px 0 0;
+    }
+
+    .logo {
+        height: 150px;
+        width: 150px;
+        margin-top: 60px;
+    }
+    
+    .my-name {
+        font-family:"Arizonia", cursive;
+        color: #F95335;
+        font-size: 60px;
+        margin-top: 45px;
+    }
+    
+    .banner p {
+        color: #F95335;
+        font-family: "Cinzel", serif;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .work-hero .row {
+        min-height: calc(50vh - 75px);
+        align-items: center;
+    }
+    
+    .work-hero-text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    
+    .work-hero-text h2{
+        font-family:"Arizonia", cursive;
+        color: #F95335;
+        font-size: 45px;
+    }
+    
+    .work-hero-text h1{
+        font-family: "Cinzel", serif;
+        color: #F95335;
+        font-size: 50px;
+    }
+    
+    .work-nav {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        margin: 50px 0 ;
+    }
+    
+    .work-nav-text a {
+        color: #F95335;
+        text-decoration: none;
+        font-family: "Cinzel", serif;
+    }
+    
+    .work-nav-text :hover {
+        text-decoration: underline;
+    }
+    
+    .project-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .project-box {
+        min-height: calc(100vh - 100px);
+        width: calc(100vw - 100px) ;
+        margin-bottom: 50px;
+        border-radius: 30px;
+        padding: 60px;
+        background-color: #50A3A4;
+    } 
+    
+    .project-animation {
+        animation: fade-in 0.5s linear forwards;
+        transform: scale(0.8);
+        opacity: 0;
+        animation-timeline: view();
+        animation-range: entry;
+    }
+    
+    @keyframes fade-in {
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    
+    .project-container:nth-child(3n+1) .project-box {
+        background-color: #F95335;
+    }
+    
+    .project-container:nth-child(3n+0) .project-box {
+        background-color: #FCAF38;
+    }
+    
+    .project-container:nth-child(3n+0) .project-text {
+        color: #5D5D5D;
+    }
+    
+    .project-text {
+        color: #FFF0D7;
+    }
+    
+    .project-text h2 {
+        font-family: "Cinzel", serif;
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    
+    .img-position {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .project-img {
+        border-radius: 30px;
+        height: calc(100vh - 250px);
+        width: calc(100vh - 250px);
+        max-width: 100%;
+
+        margin-top: 50px;
+    
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    
+    
+    .info {
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .text-description {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+    }
+    
+    .about-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .profile {
+        background-image: url(img/portfolio-background11.svg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        flex-direction: row;
+        height: calc(100vh - 32px - 75px);
+    }
+    
+    .profile-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        flex-direction: column;
+    }
+    
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-right: 0;
+    }
+    
+    .my-name-about {
+        font-family:"Arizonia", cursive;
+        color: #F95335;
+        font-size: 40px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .statement {
+        color: #F95335;
+        font-family: "Cinzel", serif;
+        font-size: 25px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    
+    
+    .about {
+        min-height: calc(100vh - 100px);
+        width: calc(100vw - 100px) ;
+        background-color: #F95335;
+        margin: 25px;
+        border-radius: 30px;
+        padding: 30px;
+    }
+    
+    .about-animation {
+        animation: fade-in 0.5s linear forwards;
+        transform: scale(0.8);
+        opacity: 0;
+        animation-timeline: view();
+        animation-range: entry;
+    }
+    
+    .about-heading {
+        font-family: "Cinzel", serif;
+        color:#FFF0D7;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .about-heading.tools {
+        margin-top: 20px;
+    }
+    
+    .video {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+
+    .video-frame {
+        margin-left: 0;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .about-paragraph {
+        font-family: "Montserrat", sans-serif;
+        color: #FFF0D7;
+        font-size: 20px;
+    }
+    
+    .skills {
+        min-height: calc(100vh - 100px);
+        width: calc(100vw - 100px) ;
+        background-color: #50A3A4;
+        margin: 25px;
+        border-radius: 30px;
+        padding: 30px;
+    }
+    
+    .tool-img {
+        width: 75px;
+        height: 75px;
+        margin: 0 20px 20px 0;
+    }
+    
+    .footer-content {
+        color:#FFF0D7;
+        background-color: #F95335;
+        padding: 60px 40px 30px 60px;
+    }
+    
+    .contact {
+        font-family: "Cinzel", serif;
+        margin-bottom: 30px;
+    }
+    
+    .footer-content h4 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+    }
+    
+    
+    .footer-content p {
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 30px;
+    }
+    
+    .logo-footer {
+        height: 130px;
+        width: 130px;
+        margin: -45px 40px 0 0;
+    }
+    
+    .logo-position {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
